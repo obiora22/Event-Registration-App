@@ -1,0 +1,30 @@
+[
+   {
+    "name": "Gamers Conference",
+    "level": "Introductory",
+    "date": "23/2/16",
+    "price": 125.99,
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania"
+    },
+    "sessions": [
+       {"topic": "Diversity in the video game community", "duration": 1, "speaker": "Roger Smith", "time": "9am", "voteCount": 0},
+       {"topic": "Understanding game development Engines", "duration": 3, "speaker": "Tim Dunkin", "time": "11am", "voteCount": 0}
+    ]
+  },
+  {
+    "name": "Web Developers Conference",
+    "level": "Advanced",
+    "date": "21/3/16",
+    "price": 120.99,
+    "location": {
+      "city": "Baltimore",
+      "state": "Maryland"
+    },
+    "sessions": [
+      {"topic": "Design Patterns in JavaScript", "duration": 2, "speaker": "Nicholas Zakas", "time": "7am", "voteCount": 0},
+      {"topic": "Objects in JS", "duration": 4, "speaker": "Kyle Simpson", "time": "3pm", "voteCount": 0}
+    ]
+  }
+]

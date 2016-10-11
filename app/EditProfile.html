@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="EventRegisterationApp">
+  <head>
+  <meta charset="utf-8">
+  <!-- Angular -->
+  <script data-require="angularjs@1.5.8" data-semver="1.5.8" src="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.14/angular-route.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-sanitize.js"></script>
+  <!-- jQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.0.min.js"
+    integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+    crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <link
+    rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="js/app.js"></script>
+  <script src="js/controllers/EventsController.js"></script>
+  <script src="js/services/EventDataService.js"></script>
+  <script src="js/controllers/EditProfileController.js"></script>
+  <script src="js/services/gravatarUrlBuilder.js"></script>
+  <script src="js/md5.js"></script>
+  <script src="js/filter.js"></script>
+  <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body ng-cloak>
+    <!-- Main container  -->
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <ul class="nav nav-pills nav-justified text-center">
+          <li><a href="navbar-brand" id="logo">Events</a></li>
+          <li><a href="NewEvent.html">Create Event</a></li>
+          <li>Two</li>
+          <li>Three</li>
+        </ul>
+      </nav>
+      <!-- Navigation -->
+      <h1>Edit Profile</h1>
+
+      <div class="profile" ng-controller="EditProfileController">
+        <!-- <img src="images/user.svg"/> -->
+        <img ng-src="{{image_url}}" alt="profile-pic" height="50px" width: "50px"/>
+        <form name="profileForm">
+          <div class="row">
+            <div class="col-md-8">
+              <fieldset class="form-group">
+                <label for="user-name">Username</label>
+                {{string_regex}}
+                <input name="username" ng-pattern="string_regex" ng-model="user.username" class="form-control" type="text" id="user-name" placeholder="Enter username ..." required/>
+                {{profileForm.username.$valid}}
+                <label for="password">Password</label>
+                <input ng-model="user.password" class="form-control" type="text" id="password" placeholder="Enter name ..." required/>
+              </fieldset>
+              <fieldset class="form-group">
+                <label for="name">Name</label>
+                <input name="name"ng-pattern="string_regex" ng-model="user.name" class="form-control" type="text" id="name" placeholder="Enter name ..." required/>
+                {{profileName.name.$valid}}
+                <label for="email">Email</label>
+                {{email_regex}}
+                <input name="email" ng-pattern="email_regex" ng-model="user.email" class="form-control" type="text" id="email" placeholder="Enter email ..." required/>
+                {{profileForm.email.$valid}}
+              </fieldset>
+              <fieldset>
+                <input type="submit" value="Save" class="btn btn-success" />
+                <input type="button" value="Cancel" class="btn btn-info" />
+              </fieldset>
+            </div>
+            <div class="col-md-4">
+              <fieldset class="form-group">
+                <label for="">Biography</label>
+                <textarea rows="13" cols="40" ng-model="user.bio" class="form-control" type="textarea" id="bio" placeholder="Enter your bio ..." required></textarea>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+
+    </div>
+
+
+  </body>
+</html>

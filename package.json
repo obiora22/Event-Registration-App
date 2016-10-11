@@ -1,0 +1,18 @@
+{
+  "name": "EventRegApp",
+  "version": "1.0.0",
+  "description": "This is a single page application for managing events",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "1.13.1",
+    "express": "4.13.0"
+  },
+  "devDependencies": {
+
+  },
+  "scripts": {
+
+  },
+  "author": "Obi Anaedozie",
+  "license": "ISC"
+}

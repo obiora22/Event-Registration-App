@@ -1,0 +1,15 @@
+{
+ "id": 1,
+ "name": "Gamers Conference",
+ "level": "Introductory",
+ "date": "23/2/16",
+ "price": 125.99,
+ "location": {
+   "city": "Philadelphia",
+   "state": "Pennsylvania"
+ },
+ "sessions": [
+    {"topic": "Diversity in the video game community", "duration": 1, "speaker": "Roger Smith", "time": "9am", "voteCount": 0},
+    {"topic": "Understanding game development Engines", "duration": 3, "speaker": "Tim Dunkin", "time": "11am", "voteCount": 0}
+ ]
+}
